@@ -11,7 +11,6 @@ nova.commands.register('kraken.runkraken', _ => {
 		throw new Error('Workspace is not a git repository');
 	}
 	var process = new Process('/usr/bin/open', {
-		/* define constant PWD to refer to current directory  */
 		args: ['-n', '-a', 'GitKraken', '--args', '-p', nova.workspace.path],
 	});
 
